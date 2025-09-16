@@ -1,0 +1,43 @@
+name: PortalDoors
+version: '1.0.2'
+main: PortalDoors.portalDoors.PortalDoors
+api-version: '1.20'
+author: Cobra4
+description: Link doors together for instant teleportation
+
+commands:
+  door:
+    description: Main command for linking portal doors
+    usage: /<command> [unlink|cancel|info]
+    aliases: [doors, portal, portaldoor]
+    permission: portaldoors.use
+
+permissions:
+  portaldoors.use:
+    description: Allows basic use of portal doors
+    default: true
+  portaldoors.link:
+    description: Allows linking doors together
+    default: true
+  portaldoors.unlink:
+    description: Allows unlinking doors
+    default: true
+  portaldoors.unlink.others:
+    description: Allows unlinking doors owned by others
+    default: op
+  portaldoors.break.linked:
+    description: Allows breaking linked doors
+    default: op
+  portaldoors.bypass.cooldown:
+    description: Bypass teleport cooldown
+    default: op
+  portaldoors.*:
+    description: All portal doors permissions
+    default: op
+    children:
+      portaldoors.use: true
+      portaldoors.link: true
+      portaldoors.unlink: true
+      portaldoors.unlink.others: true
+      portaldoors.break.linked: true
+      portaldoors.bypass.cooldown: true

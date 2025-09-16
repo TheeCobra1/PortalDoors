@@ -1,0 +1,34 @@
+allow-explosion-break-linked: false
+
+teleport:
+  cooldown: 1.0
+  bypass-permission: portaldoors.bypass.cooldown
+  show-destination-particles: true
+  
+networks:
+  max-doors-per-network: 50
+  allow-cross-dimension: true
+  require-permission-to-create: false
+  creation-permission: portaldoors.network.create
+  
+particles:
+  enabled: true
+  teleport-amount: 50
+  door-open-amount: 25
+  link-creation-amount: 30
+  
+sounds:
+  enabled: true
+  volume: 1.0
+  teleport-sound: ENTITY_ENDERMAN_TELEPORT
+  link-sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  unlink-sound: BLOCK_CHAIN_BREAK
+  
+messages:
+  prefix: "&6[PortalDoors] &r"
+  door-linked: "&a✓ Doors linked successfully!"
+  door-unlinked: "&a✓ Door unlinked!"
+  no-permission: "&c✗ You don't have permission to do that!"
+  already-linked: "&c✗ This door is already linked!"
+  network-created: "&a✓ Created network: {name}"
+  network-door-added: "&a✓ Door added to network: {name}"
